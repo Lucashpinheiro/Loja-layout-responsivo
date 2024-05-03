@@ -1,0 +1,184 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+:root {
+    --primary-color: #DDDDDD;
+    --secondary-color: #EEEEEE;
+    --third-color: #5356FF;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--third-color);
+    color: var(--secondary-color);
+    padding: 1.5em;
+}
+
+header h1 {
+    font-style: italic;
+}
+
+header nav li {
+    display: inline;
+    margin-left: 16px;
+    font-size: 1em;
+    
+}
+
+header nav li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.sobre {
+    display: flex;
+    margin-top: 32px;
+}
+
+.sobre img {
+    height: 300px;
+    margin-right: 18px;
+    margin-bottom: 64px;
+}
+
+.sobre h2,
+section > h2 {
+    border-bottom: 2.5px solid var(--third-color);
+}
+
+section > h2 {
+    margin-bottom: 32px;
+}
+
+.sobre p {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+h2 {
+    color: var(--third-color);
+    font-weight: bold;
+    font-style: italic;
+}
+
+section {
+    margin-bottom: 16px;
+}
+
+.produto img {
+    height: 200px;
+    margin-bottom: 16px;
+}
+
+.produto p {
+    margin: 16px 0;
+}
+
+.produto a {
+    background-color: var(--third-color);
+    color: var(--secondary-color);
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.produto {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+}
+
+
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+    .container {
+        max-width: 90%;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .sobre {
+        display: block;
+    }
+
+    .sobre img {
+        margin-bottom: 1em;
+    }
+
+    .sobre p {
+        margin-bottom: 2em;
+    }
+
+    .produto {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .guitarra {
+        margin-bottom: 3em;
+    }
+
+    .guitarra p {
+        max-width: 50%;
+        margin-bottom: 1em;
+    }
+
+}
+
+@media screen and (max-width: 640px) {
+    header {
+        width: 100%;
+    }
+
+    .container {
+        max-width: 80%;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    header nav li {
+        font-weight: bold;
+    }
+
+    .sobre {
+        display: block;
+    }
+
+    .sobre img {
+        height: 165px;
+    }
+
+    .sobre p {
+        margin-bottom: 4em;
+    }
+
+    .produto {
+        display: block;
+    }
+
+    .guitarra {
+        margin-bottom: 32px;
+    }
+
+    .guitarra p {
+        max-width: 50%;
+        margin-bottom: 1em;
+    }
+
+}
